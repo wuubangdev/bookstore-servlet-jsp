@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Bai22_Servlet_BatLoi">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <property name="context-root" value="Bai22_Servlet_BatLoi"/>
+        <property name="java-output-path" value="/Bai22_Servlet_BatLoi/build/classes"/>
+    </wb-module>
+</project-modules>

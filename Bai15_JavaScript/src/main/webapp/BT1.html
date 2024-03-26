@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BT1</title>
+<script language="JavaScript">
+	function showName() {
+		var name = document.querySelector("#name");
+		var output = document.querySelector("#output");
+		
+		output.innerHTML = "Ten la: " + name.value;
+	}
+</script>
+</head>
+<body>
+	<p>Nhập vào tên của bạn </p>
+	<input oninput="showName()" id="name" name="name" placeholder="Nhập tên" type="text"/>
+	<p id="output"></p>
+</body>
+</html>

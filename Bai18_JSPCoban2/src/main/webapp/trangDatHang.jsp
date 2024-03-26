@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trang Dat Hang</title>
+</head>
+<body>
+	<%
+		String fullName = request.getParameter("fullName");
+		String email = request.getParameter("inputEmail");
+		String productQuantity = request.getParameter("productQuantity");
+	%>
+	<h1>Xác nhận đặt hàng</h1>
+	<p>Xin cảm ơn bạn <b><%=fullName%></b> đã đặt <b><%= productQuantity%></b> sản phẩm.</p> 
+	<p>Thông báo mua hàng đã được gửi đến email: <b><%=email %></b></p>
+</body>
+</html>

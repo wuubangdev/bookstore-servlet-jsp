@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+	+ request.getContextPath();
+	String err = request.getAttribute("err") + "";
+	err = (err.equals("null"))?"": err;
+	Customer customer = (Customer) session.getAttribute("customer");
+	%>
+	
+	<%
+	if (customer == null) {
+	%>
+		<h3>
+			Bạn cần <a href="<%=url%>/customer-page/login.jsp">đăng nhập</a> để thực hiện chức năng này, quay về <a href="<%=url%>/index.jsp">trang chủ</a>
+		</h3>
+	<%
+		} else {
+	%>
+		
+		
+	<%} %>
+	
+</body>
+</html>

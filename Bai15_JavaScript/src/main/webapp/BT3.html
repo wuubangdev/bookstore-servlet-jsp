@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BT3</title>
+<style type="text/css">
+	.myDiv {
+		background-color: yellow;
+		width: 500px;
+		height: 500px
+	 }
+</style>
+</head>
+<body>
+	<div class="myDiv"></div>
+	<button class="myBtn">Ẩn/Hiện Div</button>
+	<script type="text/javascript">
+		const myDiv = document.querySelector(".myDiv");
+		const myBtn = document.querySelector(".myBtn");
+		myDiv.onmouseover = function () {
+			myDiv.style.backgroundColor = "red";
+		}
+		myDiv.onmouseleave = function () {
+			myDiv.style.backgroundColor = "yellow";
+		}
+		var isHiden = false;
+		myBtn.onclick = function () {
+			if (isHiden) {
+				isHiden = !isHiden;
+				myDiv.style.display = "none";
+			} else {
+				isHiden = !isHiden;
+				myDiv.style.display = "block";
+			}
+		}
+	</script>
+</body>
+</html>

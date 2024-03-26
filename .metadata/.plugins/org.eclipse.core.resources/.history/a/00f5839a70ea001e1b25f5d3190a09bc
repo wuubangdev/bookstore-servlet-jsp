@@ -1,0 +1,49 @@
+package util;
+
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.internet.MimeMessage;
+
+public class Email {
+	//from: testemailtest047@gmail.com
+	//pass: dqowzastdiarlehv
+	static final String from = "testemailtest047@gmail.com";
+	static final String password = "dqowzastdiarlehv";
+	static final String to = "levubang997@gmail.com";
+	
+	public static void main(String[] args) {
+		
+		//Properties: Khai bao cac thuoc tinh
+		Properties props = new Properties();
+		props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP HOST
+		props.put("mail.smtp.port", "587"); //TLS 587 SSL 465
+		props.put("mail.smtp.auth", "true"); //Yeu cau dang nhap
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.starttls.enable", "true"); //giao thuc
+		
+		// Create Authenticator
+		Authenticator auth = new Authenticator() {
+			@Override
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(from, password);
+			}
+		};
+		
+		// Create session
+		Session session = Session.getInstance(props, auth);
+		
+		//Send email
+		MimeMessage msg = new MimeMessage(session);
+		try {
+			msg.addHeader("Conten-type", "text/html; charset=UTF-8");
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<form id="form-1" action="">
+		<table id="table-1">
+			<thead>
+			<tbody>
+				<tr>
+					<td colspan="2"><b>THÔNG TIN ĐĂNG NHẬP</b></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input id="idEmail" name="email"
+						placeholder="abc@gmail.com" type="email" /></td>
+				</tr>
+				<tr>
+					<td>Mật khẩu:</td>
+					<td><input id="idPassWord" name="passWord" placeholder="" type="password" /></td>
+				</tr>
+				<tr>
+					<td>Nhập lại mật khẩu:</td>
+					<td><input id="idRePassWord" name="rePassWord" placeholder="" type="password" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>THÔNG TIN CÁ NHÂN</b></td>
+				</tr>
+				<tr>
+					<td>*Họ và tên:</td>
+					<td><input id="idFullName" name="fullName" placeholder="Lê Văn A" type="text" /></td>
+				</tr>
+				<tr>
+					<td>*Giới tính:</td>
+					<td>
+						<input id="idMale" name="gender" placeholder="Lê Văn A"	type="radio" /> 
+						<label id="" for="idMale">Nam</label> 
+						<input id="idFemale" name="gender" placeholder="Lê Văn A" type="radio" />
+						<label id="" for="idFemale">Nữ</label></td>
+				</tr>
+				<tr>
+					<td>Ngày sinh</td>
+					<td>
+						<input type="date" name="dateOfBirth" id="idDateOfBirth"/>
+					</td>
+				</tr>
+				<tr>
+					<td>*Tuổi:</td>
+					<td><input id="idAge" name="age" placeholder="18" type="number" min="0"/></td>
+				</tr>
+				<tr>
+					<td>*Số điện thoại:</td>
+					<td><input id="idPhoneNumber" placeholder="0912345678"
+						type="tel" /></td>
+				</tr>
+				<tr>
+					<td>Số di động:</td>
+					<td><input id="idTelephone" placeholder="0912345678"
+						type="tel" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>ĐỊA CHỈ</b></td>
+				</tr>
+				<tr>
+					<td>Quốc gia:</td>
+					<td><select id="idCountry">
+							<option value="">--Quốc gia--</option>
+							<option value="VN">Việt Nam</option>
+							<option value="Chinase">Trung Quốc</option>
+							<option value="Japan">Nhật Bản</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Tỉnh/Thành:</td>
+					<td><select id="idProvince">
+							<option value="">--Tỉnh/Thành Phố--</option>
+							<option value="CT">Cần Thơ</option>
+							<option value="VanNam">Vân Namc</option>
+							<option value="Osaka">Osaka</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Quận/Huyện:</td>
+					<td><select id="idDistrict">
+							<option value="">--Quận/Huyện--</option>
+							<option value="NK">Ninh Kiều</option>
+							<option value="CR">Cái Răng</option>
+							<option value="CD">Cờ đỏ</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Địa chỉ nhà:</td>
+					<td><textarea rows="" cols=""></textarea></td>
+				</tr>
+				<tr>
+					<td>Sở thích:</td>
+					<td>
+						<input type="checkbox" value="music" id="idMusic" name="music"/>
+						<label id="" for="idMusic">Music</label>
+						<input type="checkbox" value="sport" id="idSport" name="sport"/>
+						<label id="" for="idSport">Sport</label>
+						<input type="checkbox" value="game" id="idGame" name="game"/>
+						<label id="" for="idGame">Game</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Hình ảnh</td>
+					<td><input id="idImage" name="image" type="file"/></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><input type="submit" value="Submit" id="button-1"/></td>
+					<td><input type="reset" value="Reset" id="button-1"/></td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+</body>
+</html>

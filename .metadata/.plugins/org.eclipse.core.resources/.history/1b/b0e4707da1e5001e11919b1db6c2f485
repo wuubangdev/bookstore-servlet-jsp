@@ -1,0 +1,91 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dat Mua May Tinh</title>
+</head>
+<body>
+	<%
+		String processor = request.getParameter("processor");
+		String ram = request.getParameter("ram");
+		String monitor = request.getParameter("monitor");
+		String[] accessories = request.getParameterValues("accessories");
+		
+		double totalPrice = 0;
+		double processorPrice = 0;
+		double ramPrice = 0;
+		double monitorPrice = 0;
+		double accessoriesPrice = 0;
+		
+		if (processor!=null) {
+			if(processor.equals("corei9")) {
+				processorPrice += 200;
+			} else if(processor.equals("corei7")) {
+				processorPrice += 150;
+			} else if(processor.equals("corei5")) {
+				processorPrice += 100;
+			} else if(processor.equals("corei3")) {
+				processorPrice += 50;
+			}
+		}
+		
+		if (ram!=null) {
+			if(ram.equals("8G")) {
+				ramPrice += 15;
+			} else if(ram.equals("16G")) {
+				ramPrice += 30;
+			} else if(ram.equals("32G")) {
+				ramPrice += 45;
+			}
+		}
+		
+		if (ram!=null) {
+			if(ram.equals("24i")) {
+				monitorPrice += 120;
+			} else if(ram.equals("27i")) {
+				monitorPrice += 180;
+			} else if(ram.equals("32i")) {
+				monitorPrice += 240;
+			}
+		}
+		
+		if(accessories!=null) {
+			for (String chooses: accessories) {
+				if(chooses.equals("1")) {
+					accessoriesPrice += 80; 
+				}
+				if(chooses.equals("2")) {
+					accessoriesPrice += 250; 
+				}
+				if(chooses.equals("3")) {
+					accessoriesPrice += 180; 
+				}
+				if(chooses.equals("4")) {
+					accessoriesPrice += 45; 
+				}
+			}
+		}
+		totalPrice = accessoriesPrice + monitorPrice +ramPrice + processorPrice;
+	%>
+	<h1>Hóa đơn</h1>
+	<div class="container" style="width: 720px">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">Tên sản phẩm</th>
+		      <th scope="col">Giá tiền</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<%if(processor!=null) %>
+		    <tr>
+		      <td>Mark</td>
+		      <td>Otto</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</body>
+</html>

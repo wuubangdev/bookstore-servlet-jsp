@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BT2</title>
+
+</head>
+<body>
+
+
+	<div id="myDiv">Nội dung ban đầu</div>
+	<input id="change" value="Thay đổi"  type="button"/>
+	
+	
+	<script>
+		var change = document.querySelector("#change");
+		change.onclick = function () {
+			window.alert("Test");
+			var myDiv = document.querySelector("#myDiv");
+			myDiv.innerHTML = "Nội dung bị thay đổi";
+		}
+	</script>
+</body>
+</html>

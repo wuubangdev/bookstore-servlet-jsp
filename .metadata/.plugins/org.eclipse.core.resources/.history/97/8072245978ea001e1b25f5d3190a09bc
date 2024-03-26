@@ -1,0 +1,10 @@
+package util;
+
+import java.util.Random;
+
+public class CreateRandomCode {
+	public static String createCode() {
+		Random rd = new Random();
+		String s1
+	}
+}
